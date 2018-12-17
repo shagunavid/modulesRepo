@@ -1,5 +1,5 @@
 require_lowercase_characters = true
-require_uppercase_characters = true
+require_uppercase_characters = false
 allow_users_to_change_password = false
 password_reuse_prevention = 9
 minimum_password_length = 10
