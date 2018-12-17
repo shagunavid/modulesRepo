@@ -1,3 +1,5 @@
+
+
 provider "aws" {
   access_key = "${var.access_key}"
   secret_key = "${var.secret_key}"
@@ -12,6 +14,15 @@ resource "aws_instance" "exae" {
     command = "echo ${aws_instance.example.public_ip} > ip_address.txt"
   }
 }
+
+
+
+module "finance" {
+  source = "https://github.com/shagunavid/modulesRepo.git//shagun_files"
+}
+
+
+
 
 resource "aws_iam_account_password_policy" "strict" {
   minimum_password_length        = "${var.minimum_password_length}"
